@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Switching off autocomplete feature"
+defaults write com.apple.dt.Xcode DVTTextAutoSuggestCompletions 0
+
+echo "Quitting XCode"
+pkill -x Xcode
+/bin/sleep 2
+
+echo "Relaunching XCode"
+open /Applications/Xcode.app
+/bin/sleep 7
+
+echo "Switching on autocomplete feature"
+defaults write com.apple.dt.Xcode DVTTextAutoSuggestCompletions 1
+
+echo "Restarting XCode"
+pkill -x Xcode
+sleep 1s
+open /Applications/Xcode.app
+
+echo "Fix completed!"
