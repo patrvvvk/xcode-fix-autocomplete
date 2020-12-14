@@ -20,3 +20,4 @@ sleep 1s
 open /Applications/Xcode.app
 
 echo "Fix completed!"
+echo "You might need to wait for indexing to finish before autocompletion starts working again"
